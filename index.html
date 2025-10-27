@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>churchdilemma — Linktree</title>
+  <link rel="stylesheet" href="style.css" />
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+</head>
+<body>
+  <main class="phone">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-bg" style="background-image:url('images/iconBoth.jpg');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="avatar">
+          <img src="images/iconBoth.jpg" alt="churchdilemma icon" />
+        </div>
+        <h1>@churchdilemma</h1>
+
+        <!-- top socials -->
+        <nav class="socials">
+          <a data-key="instagram" class="icon-btn" aria-label="Instagram">
+            <!-- Instagram SVG -->
+            <iconify-icon icon="simple-icons:instagram"></iconify-icon>
+          </a>
+          <a data-key="youtube" class="icon-btn" aria-label="Youtube">
+            <!-- Youtube SVG -->
+            <iconify-icon icon="simple-icons:youtube"></iconify-icon>
+          </a>
+          <a data-key="twitter" class="icon-btn" aria-label="X (Twitter)">
+            <!-- X / Twitter SVG -->
+            <iconify-icon icon="simple-icons:x"></iconify-icon>
+          </a>
+          <a data-key="email" class="icon-btn" aria-label="E-Mail">
+            <!-- Mail SVG -->
+            <iconify-icon icon="mdi:email-outline"></iconify-icon>
+          </a>
+          <a data-key="patreon" class="icon-btn" aria-label="Patreon">
+            <!-- Patreon SVG -->
+            <iconify-icon icon="simple-icons:patreon"></iconify-icon>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ARTWORK SECTION -->
+    <section class="section artwork">
+      <h2>Artwork</h2>
+
+      <div class="card">
+        <div class="left">
+          <img class="mini-avatar" src="images/iconArtwork.jpg" alt="Artwork icon" />
+          <span class="label">Stream</span>
+        </div>
+        <div class="services">
+          <a class="svc spotify"  data-key="artwork_spotify"      aria-label="Spotify">
+            <iconify-icon icon="simple-icons:spotify"></iconify-icon>
+          </a>
+          <a class="svc ytmusic" data-key="artwork_youtubemusic" aria-label="YouTube Music">
+            <iconify-icon icon="simple-icons:youtubemusic"></iconify-icon>
+          </a>
+          <a class="svc applemusic" data-key="artwork_applemusic" aria-label="Apple Music">
+            <iconify-icon icon="simple-icons:applemusic"></iconify-icon>
+          </a>
+          <a class="svc amazon" data-key="artwork_amazonmusic" aria-label="Amazon Music">
+            <iconify-icon icon="simple-icons:amazonmusic"></iconify-icon>
+          </a>
+          <a class="svc deezer" data-key="artwork_deezer" aria-label="Deezer">
+            <iconify-icon icon="simple-icons:deezer"></iconify-icon>
+          </a>
+          <a class="svc soundcloud" data-key="artwork_soundcloud" aria-label="SoundCloud">
+            <iconify-icon icon="simple-icons:soundcloud"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <a class="btn tiktok" data-key="artwork_tiktok">
+        <span class="tt-icon">
+          <iconify-icon icon="simple-icons:tiktok"></iconify-icon>
+        </span>
+        <span>Community</span>
+      </a>
+    </section>
+
+    <!-- VENT SECTION -->
+    <section class="section vent">
+      <h2>Vent</h2>
+
+      <div class="card">
+        <div class="left">
+          <img class="mini-avatar" src="images/iconVent.jpg" alt="Vent icon" />
+          <span class="label">Stream</span>
+        </div>
+        <div class="services">
+          <a class="svc spotify"  data-key="vent_spotify"      aria-label="Spotify">
+            <iconify-icon icon="simple-icons:spotify"></iconify-icon>
+          </a>
+          <a class="svc ytmusic" data-key="vent_youtubemusic" aria-label="YouTube Music">
+            <iconify-icon icon="simple-icons:youtubemusic"></iconify-icon>
+          </a>
+          <a class="svc applemusic" data-key="vent_applemusic" aria-label="Apple Music">
+            <iconify-icon icon="simple-icons:applemusic"></iconify-icon>
+          </a>
+          <a class="svc amazon" data-key="vent_amazonmusic" aria-label="Amazon Music">
+            <iconify-icon icon="simple-icons:amazonmusic"></iconify-icon>
+          </a>
+          <a class="svc deezer" data-key="vent_deezer" aria-label="Deezer">
+            <iconify-icon icon="simple-icons:deezer"></iconify-icon>
+          </a>
+          <a class="svc soundcloud" data-key="vent_soundcloud" aria-label="SoundCloud">
+            <iconify-icon icon="simple-icons:soundcloud"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <a class="btn tiktok dark" data-key="vent_tiktok">
+        <span class="tt-icon">
+          <iconify-icon icon="simple-icons:tiktok"></iconify-icon>
+        </span>
+        <span>Community</span>
+      </a>
+    </section>
+
+    <!--
+    <footer class="spacer"></footer>
+    -->
+    <footer class="footer">
+      <p>© <span id="year"></span> church dilemma ·
+        <a href="#" id="privacy-link">Privacy Policy</a>
+      </p>
+    </footer>
+  </main>
+  
+
+   <!-- Privacy Modal -->
+    <div id="privacy-modal" class="modal" aria-hidden="true">
+      <div class="modal__backdrop" id="privacy-backdrop" aria-hidden="true"></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+        <button class="modal__close" id="privacy-close" aria-label="Close">×</button>
+        <h3 id="privacy-title">Privacy Policy</h3>
+        <p>Diese Seite setzt <strong>keine</strong> Cookies, verwendet kein Analytics und sammelt keine personenbezogenen Daten.</p>
+        <ul>
+          <li>Links führen zu externen Diensten (z. B. Spotify, TikTok). Deren Datenschutz gilt dort.</li>
+          <li>Server-Logfiles (IP/Browser/Datum) können technisch bedingt kurzzeitig anfallen.</li>
+          <li>Kontakt: <a data-key="email">E-Mail</a></li>
+        </ul>
+        <p>Wenn du einen Link anklickst, öffnet sich die Zielseite in einem neuen Tab.</p>
+      </div>
+      
+    </div>
+  
+
+  <!-- Load links.txt and wire all anchors -->
+  <script>
+    (async function () {
+      try {
+        const res = await fetch('links.txt', {cache: 'no-store'});
+        const text = await res.text();
+        const map = {};
+        text.split(/\r?\n/).forEach(line => {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith('#')) return;
+          const idx = trimmed.indexOf('=');
+          if (idx > 0) {
+            const k = trimmed.slice(0, idx).trim();
+            const v = trimmed.slice(idx + 1).trim();
+            map[k] = v;
+          }
+        });
+
+        // assign hrefs
+        document.querySelectorAll('[data-key]').forEach(a => {
+          const k = a.getAttribute('data-key');
+          const href = map[k] || '#';
+          a.setAttribute('href', href);
+          a.setAttribute('target', '_blank');
+          a.setAttribute('rel', 'noopener');
+        });
+      } catch (e) {
+        console.error('links.txt konnte nicht geladen werden.', e);
+      }
+    })();
+    
+    document.querySelectorAll('iconify-icon').forEach(i => i.setAttribute('inline','false'));
+  </script>
+  
+  
+
+    <script>
+      // Auto-Jahr
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Privacy Modal open/close
+      const open = document.getElementById('privacy-link');
+      const modal = document.getElementById('privacy-modal');
+      const closeBtn = document.getElementById('privacy-close');
+      const backdrop = document.getElementById('privacy-backdrop');
+      function openModal(e){ e && e.preventDefault(); modal.classList.add('is-open'); }
+      function closeModal(){ modal.classList.remove('is-open'); }
+      open.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+    </script>
+
+</body>
+</html>

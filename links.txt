@@ -1,0 +1,27 @@
+# Alle Links zentral hier pflegen. Format: schluessel=https://dein.link
+# Top-Socials
+instagram=https://instagram.com/churchdilemma
+youtube=https://www.youtube.com/@churchdilemma
+twitter=https://x.com/churchdilemma
+email=mailto:churchdilemma@gmail.com
+patreon=https://patreon.com/churchdilemma
+
+# ARTWORK — Streaming
+artwork_spotify=https://open.spotify.com/artist/XXXXXXXX
+artwork_youtubemusic=https://music.youtube.com/channel/XXXXXXXX
+artwork_applemusic=https://music.apple.com/artist/XXXXXXXX
+artwork_amazonmusic=https://music.amazon.de/artists/XXXXXXXX
+artwork_deezer=https://www.deezer.com/artist/XXXXXXXX
+artwork_soundcloud=https://soundcloud.com/church-dilemma-artwork
+# ARTWORK — Community
+artwork_tiktok=https://www.tiktok.com/@churchdilemma.artwork
+
+# VENT — Streaming
+vent_spotify=https://open.spotify.com/artist/YYYYYYYY
+vent_youtubemusic=https://music.youtube.com/channel/YYYYYYYY
+vent_applemusic=https://music.apple.com/artist/YYYYYYYY
+vent_amazonmusic=https://music.amazon.de/artists/YYYYYYYY
+vent_deezer=https://www.deezer.com/artist/YYYYYYYY
+vent_soundcloud=https://soundcloud.com/church-dilemma-vent
+# VENT — Community
+vent_tiktok=https://www.tiktok.com/@churchdilemma.vent
