@@ -294,10 +294,6 @@ iconify-icon {
 
 
 
-
-
-
-
 /* Modal */
 .modal{ 
   position: fixed; inset:0; display:none; z-index:9999;
@@ -324,5 +320,64 @@ iconify-icon {
   background:transparent; border:0; color:#fff; font-size:24px; line-height:1;
   cursor:pointer;
 }
+
+
+
+/* Mail-Popover unter dem Icon */
+.icon-btn.has-mail{ position: relative; }
+
+/* Grundlayout: versteckt, erscheint bei Hover (Desktop) */
+.mail-popover{
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translate(-50%,-2px);
+  display: none;
+  align-items: center;
+  gap: 10px;
+
+  background: #fff;
+  color: #111;
+  border-radius: 10px;
+  padding: 8px 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  border: 1px solid rgba(0,0,0,.06);
+  z-index: 5;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.icon-btn.has-mail:hover .mail-popover{
+  display: inline-flex;
+}
+
+/* kleine Pfeilspitze */
+.mail-popover::before{
+  content:'';
+  position:absolute;
+  top:-6px; left:50%; transform:translateX(-50%);
+  border:6px solid transparent;
+  border-bottom-color:#fff;
+}
+
+/* Copy-Button */
+.copy-btn{
+  display:grid; place-items:center;
+  width:26px; height:26px;
+  border-radius:8px;
+  background: #f1f1f1;
+  border:1px solid rgba(0,0,0,.08);
+  cursor:pointer;
+  transition: transform .08s ease, background .12s ease;
+}
+.copy-btn:hover{ transform: translateY(-1px); background:#eaeaea; }
+.copy-btn iconify-icon{ width:16px; height:16px; color:#111; }
+
+/* Mobile: kein Hover – Popover per JS togglen */
+@media (hover:none){
+  .icon-btn.has-mail:hover .mail-popover{ display:none; }
+}
+
 
 

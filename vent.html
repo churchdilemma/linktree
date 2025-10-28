@@ -39,9 +39,17 @@ layout: null
             <!-- X / Twitter SVG -->
             <iconify-icon icon="simple-icons:x"></iconify-icon>
           </a>
-          <a data-key="email" class="icon-btn" aria-label="E-Mail">
-            <!-- Mail SVG -->
-            <iconify-icon icon="mdi:email-outline"></iconify-icon>
+          <!-- Mail mit Popover -->
+          <a class="icon-btn has-mail" data-key="email" id="mail-btn" aria-label="E-Mail">
+            <iconify-icon icon="mdi:email-outline" inline="false"></iconify-icon>
+
+            <!-- Popover: wird via CSS/JS gezeigt -->
+            <div class="mail-popover" id="mail-popover" role="tooltip" aria-hidden="true">
+              <span class="mail-address" id="mail-address">loading…</span>
+              <button class="copy-btn" id="copy-mail" aria-label="Copy email" type="button">
+                <iconify-icon icon="mdi:content-copy" inline="false"></iconify-icon>
+              </button>
+            </div>
           </a>
         </nav>
       </div>
@@ -185,6 +193,77 @@ layout: null
       backdrop.addEventListener('click', closeModal);
       document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
     </script>
+    <script>
+        // nachdem map{} aus links.txt gebaut wurde – Hänge dies AN deinen bestehenden Code an:
+        (async function attachMailPopover(){
+          try{
+            const res = await fetch('links.txt', {cache:'no-store'});
+            const text = await res.text();
+            const map = {};
+            text.split(/\r?\n/).forEach(line=>{
+              const t=line.trim(); if(!t||t.startsWith('#')) return;
+              const i=t.indexOf('='); if(i>0){ map[t.slice(0,i).trim()]=t.slice(i+1).trim(); }
+            });
+
+            const mailHref = map['email'] || '';                 // z.B. mailto:churchdilemma@gmail.com
+            const mailAddr = mailHref.replace(/^mailto:/i,'');   // reine Adresse extrahieren
+
+            // setze Mail-Anzeige
+            const addrEl = document.getElementById('mail-address');
+            const copyBtn = document.getElementById('copy-mail');
+            const pop    = document.getElementById('mail-popover');
+            const btn    = document.getElementById('mail-btn');
+            if(!addrEl || !btn) return;
+
+            addrEl.textContent = mailAddr || '—';
+
+            // Copy-to-clipboard
+            copyBtn?.addEventListener('click', (e)=>{
+              e.preventDefault(); e.stopPropagation();
+              const txt = mailAddr || '';
+              if(!txt) return;
+              (navigator.clipboard?.writeText(txt) || Promise.reject()).then(()=>{
+                copyBtn.classList.add('copied');
+                copyBtn.style.background = '#d9f7e3';
+                setTimeout(()=>{
+                  copyBtn.classList.remove('copied');
+                  copyBtn.style.background = '';
+                }, 900);
+              }).catch(()=>{
+                // Fallback
+                const tmp = document.createElement('input');
+                tmp.value = txt; document.body.appendChild(tmp);
+                tmp.select(); document.execCommand('copy'); document.body.removeChild(tmp);
+              });
+            });
+
+            // Mobile: Toggle per Tap, ohne Mailto zu unterbrechen
+            // kurzer Tap zeigt/verbirgt Popover, langer Tap/zweiter Tap öffnet Mail
+            let shown = false, tapTimer = null;
+            btn.addEventListener('click', (e)=>{
+              if (window.matchMedia('(hover:none)').matches){
+                if(!shown){
+                  e.preventDefault();
+                  pop.style.display = 'inline-flex';
+                  shown = true;
+                  // auto-hide nach 3s
+                  clearTimeout(tapTimer);
+                  tapTimer = setTimeout(()=>{ pop.style.display='none'; shown=false; }, 3000);
+                } else {
+                  // zweiter Tap: normal weiter (öffnet mailto:)
+                  pop.style.display='none'; shown=false;
+                }
+              }
+            });
+            // außerhalb klicken => schließen
+            document.addEventListener('click', (e)=>{
+              if(!pop.contains(e.target) && !btn.contains(e.target)){
+                pop.style.display='none'; shown=false;
+              }
+            });
+          }catch(e){ console.warn('Mail-Popover konnte nicht initialisiert werden.', e); }
+        })();
+      </script>
 
 </body>
 </html>
