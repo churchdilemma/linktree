@@ -19,6 +19,46 @@ body{
   display:flex;
   justify-content:center;
 }
+/* ============================================= */
+/* ==========  THEME VARIANTEN  ================ */
+/* ============================================= */
+
+/* --- Weißer Hintergrund (light theme) --- */
+body.theme-light,
+body.theme-light .phone {
+  background: var(--weiss);
+}
+
+/* Passen die Sections dazu leicht an */
+body.theme-light .footer {
+  background: rgba(0,0,0,0.04);
+  color: #000;
+}
+body.theme-light .footer a {
+  color: #000;
+  border-bottom-color: rgba(0,0,0,0.3);
+}
+
+/* --- Schwarzer Hintergrund (dark theme) --- */
+body.theme-dark,
+body.theme-dark .phone {
+  background: var(--braun-dunkel);
+}
+
+
+body.theme-dark .footer {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+body.theme-dark .footer a {
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.4);
+}
+
+
+
+
+
 a{
   color: inherit;
   text-decoration: none;
@@ -121,6 +161,13 @@ iconify-icon {
   top: 1px;
   left: 1px;
 } 
+/* TikTok-Button in Vent-Bereich – auf braun-hell einfärben */
+.btn.tiktok.dark {
+  background: #2f231b;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 
 
 
@@ -278,6 +325,9 @@ iconify-icon {
   background: linear-gradient(180deg, var(--pink), #8b445c);
   color:#fff;
   border:1px solid rgba(255,255,255,.18);
+}
+.btn.donate.vent{
+  background: #2f231b;
 }
 .btn.donate .tt-icon{
   background: rgba(255,255,255,.18);
