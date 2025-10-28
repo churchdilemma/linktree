@@ -38,10 +38,6 @@
             <!-- Mail SVG -->
             <iconify-icon icon="mdi:email-outline"></iconify-icon>
           </a>
-          <a data-key="patreon" class="icon-btn" aria-label="Patreon">
-            <!-- Patreon SVG -->
-            <iconify-icon icon="simple-icons:patreon"></iconify-icon>
-          </a>
         </nav>
       </div>
     </header>
@@ -124,9 +120,18 @@
       </a>
     </section>
 
-    <!--
-    <footer class="spacer"></footer>
-    -->
+    <!-- Support Button -->
+    <section class="section support">
+      <a class="btn donate" data-key="donation">
+        <span class="tt-icon">
+          <!-- Hand + Münze Icon (Iconify) -->
+          <iconify-icon icon="mdi:hand-coin-outline" inline="false"></iconify-icon>
+        </span>
+        <span>Support my art</span>
+      </a>
+    </section>
+
+    
     <footer class="footer">
       <p>© <span id="year"></span> church dilemma ·
         <a href="#" id="privacy-link">Privacy Policy</a>
@@ -141,13 +146,14 @@
       <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
         <button class="modal__close" id="privacy-close" aria-label="Close">×</button>
         <h3 id="privacy-title">Privacy Policy</h3>
-        <p>Diese Seite setzt <strong>keine</strong> Cookies, verwendet kein Analytics und sammelt keine personenbezogenen Daten.</p>
+        <p>This site does not set any cookies, does not use analytics, and does not collect any personal data.</p>
         <ul>
-          <li>Links führen zu externen Diensten (z. B. Spotify, TikTok). Deren Datenschutz gilt dort.</li>
-          <li>Server-Logfiles (IP/Browser/Datum) können technisch bedingt kurzzeitig anfallen.</li>
-          <li>Kontakt: <a data-key="email">E-Mail</a></li>
+          <li>Links lead to external services (e.g., Spotify, TikTok). Their privacy policies apply there.</li>
+          <li>Server log files (IP/browser/date) may be generated briefly for technical reasons.</li>
+          <li>Contact: <a data-key="email">Email</a></li>
         </ul>
-        <p>Wenn du einen Link anklickst, öffnet sich die Zielseite in einem neuen Tab.</p>
+        <p>When you click a link, the target page opens in a new tab.</p>
+
       </div>
       
     </div>

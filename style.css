@@ -261,6 +261,38 @@ iconify-icon {
 .footer a:hover{ opacity:.8; }
 
 
+/* Support-Button – nutzt .btn-Basis, bekommt nur eigenes Skin */
+.section.support{
+  text-align: center;        /* Button mittig ausrichten */
+  padding: 20px 0 32px;      /* etwas Luft oben/unten */
+}
+.btn.donate{
+  display: inline-flex;       /* passt sich dem Inhalt an */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                   /* Abstand zwischen Icon & Text */
+  width: auto;                /* kein 100%-Stretch */
+  padding: 10px 18px;         /* kompakter */
+  font-size: 14px;            /* etwas kleinerer Text */
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--pink), #8b445c);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+}
+.btn.donate .tt-icon{
+  background: rgba(255,255,255,.18);
+}
+.btn.donate .tt-icon iconify-icon{
+  color:#fff;
+}
+
+/* kleine Interaktion wie deine anderen Buttons */
+.btn.donate:hover{
+  filter: saturate(1.08);
+  transform: translateY(-1px);
+}
+
+
 
 
 

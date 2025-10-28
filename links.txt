@@ -4,7 +4,6 @@ instagram=https://instagram.com/churchdilemma
 youtube=https://www.youtube.com/@churchdilemma
 twitter=https://x.com/churchdilemma
 email=mailto:churchdilemma@gmail.com
-patreon=https://patreon.com/churchdilemma
 
 # ARTWORK — Streaming
 artwork_spotify=https://open.spotify.com/artist/XXXXXXXX
@@ -25,3 +24,5 @@ vent_deezer=https://www.deezer.com/artist/YYYYYYYY
 vent_soundcloud=https://soundcloud.com/church-dilemma-vent
 # VENT — Community
 vent_tiktok=https://www.tiktok.com/@churchdilemma.vent
+
+donation=https://ko-fi.com/churchdilemma
