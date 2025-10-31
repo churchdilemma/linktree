@@ -6,8 +6,8 @@ twitter=https://x.com/churchdilemma
 email=mailto:churchdilemma@gmail.com
 
 # ARTWORK — Streaming
-artwork_spotify=https://open.spotify.com/artist/5EexlTyklNojYqKe6Avizs?si=EvJgQF55RbCvVJTa7t2tnw
-artwork_youtubemusic=https:music.youtube.com/channel/UC_wF-vuRBNh4XAxeoNa0oBw?si=I4nrrY_Z4RgNeq5w
+artwork_spotify=https://open.spotify.com/artist/5EexlTyklNojYqKe6Avizs
+artwork_youtubemusic=https:music.youtube.com/channel/UC_wF-vuRBNh4XAxeoNa0oBw
 artwork_applemusic=https://music.apple.com/at/artist/church-dilemma-artwork/1848947110
 artwork_amazonmusic=https://music.amazon.de/artists/B0FXYG8VVD/church-dilemma-artwork
 artwork_deezer=https://www.deezer.com/de/artist/353061822
@@ -16,8 +16,8 @@ artwork_soundcloud=https://soundcloud.com/church-dilemma-artwork
 artwork_tiktok=https://www.tiktok.com/@churchdilemma.artwork
 
 # VENT — Streaming
-vent_spotify=https://open.spotify.com/artist/2dWpepqv5D8PBkDjydZOB0?si=-NBAKjrDS_C4yI_TRE-GqQ
-vent_youtubemusic=https://music.youtube.com/channel/UCnbfm0MLO3AiZSNCcMepg5w?si=G-agfOUIhaVFb0sY
+vent_spotify=https://open.spotify.com/artist/2dWpepqv5D8PBkDjydZOB0
+vent_youtubemusic=https://music.youtube.com/channel/UCnbfm0MLO3AiZSNCcMepg5w
 vent_applemusic=https://music.apple.com/at/artist/church-dilemma-vent/1848015337
 vent_amazonmusic=https://music.amazon.de/artists/B0FXFD8WZV/church-dilemma-vent
 vent_deezer=https://www.deezer.com/de/artist/352316032
