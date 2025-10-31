@@ -7,7 +7,7 @@ email=mailto:churchdilemma@gmail.com
 
 # ARTWORK — Streaming
 artwork_spotify=https://open.spotify.com/artist/5EexlTyklNojYqKe6Avizs
-artwork_youtubemusic=https:music.youtube.com/channel/UC_wF-vuRBNh4XAxeoNa0oBw
+artwork_youtubemusic=https://music.youtube.com/channel/UC_wF-vuRBNh4XAxeoNa0oBw
 artwork_applemusic=https://music.apple.com/at/artist/church-dilemma-artwork/1848947110
 artwork_amazonmusic=https://music.amazon.de/artists/B0FXYG8VVD/church-dilemma-artwork
 artwork_deezer=https://www.deezer.com/de/artist/353061822
