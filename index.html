@@ -144,7 +144,7 @@
     <footer class="footer">
       <p>© <span id="year"></span> Church Dilemma ·
         <a href="#" id="privacy-link">Privacy Policy</a>
-        <li>Contact: <a data-key="email">Email</a></li>
+        <li>Contact: <a data-key="email" id="privacy-email">Email</a></li>
       </p>
     </footer>
   </main>
@@ -160,7 +160,7 @@
         <ul>
           <li>Links lead to external services (e.g., Spotify, TikTok). Their privacy policies apply there.</li>
           <li>Server log files (IP/browser/date) may be generated briefly for technical reasons.</li>
-          <li>Contact: <a data-key="email">Email</a></li>
+          <li>Contact: <a data-key="email" id="privacy-email">church</a></li>
         </ul>
         <p>When you click a link, the target page opens in a new tab.</p>
 
@@ -191,17 +191,6 @@
         document.querySelectorAll('[data-key]').forEach(a => {
           const k = a.getAttribute('data-key');
           const href = map[k] || '#';
-          
-          // Wenn es der E-Mail-Link im Privacy-Modal ist, füge auch Text hinzu
-          if (k === 'email') {
-            const mailAddr = href.replace(/^mailto:/i, '');
-            // Nur ergänzen, wenn noch kein Text nach dem Link steht
-            if (a.textContent.trim().toLowerCase() === 'e-mail') {
-              a.textContent = mailAddr;  // Text im Link ersetzen
-            }
-          }
-
-          
           a.setAttribute('href', href);
           a.setAttribute('target', '_blank');
           a.setAttribute('rel', 'noopener');
@@ -212,6 +201,12 @@
     })();
     
     document.querySelectorAll('iconify-icon').forEach(i => i.setAttribute('inline','false'));
+    
+    const pe = document.getElementById('privacy-email');
+    if (pe && map && map.email) {
+      pe.textContent = map.email.replace(/^mailto:/i,'');
+    }
+
   </script>
   
   
