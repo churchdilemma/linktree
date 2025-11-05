@@ -122,8 +122,9 @@ layout: null
     <footer class="spacer"></footer>
     -->
     <footer class="footer">
-      <p>© <span id="year"></span> church dilemma ·
+      <p>© <span id="year"></span> Church Dilemma ·
         <a href="#" id="privacy-link">Privacy Policy</a>
+        <li>Contact: <a data-key="email">Email</a></li>
       </p>
     </footer>
   </main>
@@ -170,6 +171,21 @@ layout: null
         document.querySelectorAll('[data-key]').forEach(a => {
           const k = a.getAttribute('data-key');
           const href = map[k] || '#';
+          // ================================
+          // Zeigt E-Mail-Text automatisch im Privacy-Modal an
+          // ================================
+          const emailHref = map['email'] || '';
+          if (emailHref) {
+            const emailText = emailHref.replace(/^mailto:/i, '');
+            // Alle Email-Links durchgehen
+            document.querySelectorAll('a[data-key="email"]').forEach(link => {
+              // Nur die Textversion (nicht das Icon im Header) verändern
+              if (!link.querySelector('iconify-icon')) {
+                link.textContent = emailText;
+              }
+            });
+          }
+          
           a.setAttribute('href', href);
           a.setAttribute('target', '_blank');
           a.setAttribute('rel', 'noopener');
