@@ -144,7 +144,7 @@
     <footer class="footer">
       <p>© <span id="year"></span> Church Dilemma ·
         <a href="#" id="privacy-link">Privacy Policy</a>
-        <li>Contact: <a data-key="email" id="privacy-email">Email</a></li>
+        <li>Contact: <a data-key="email" onclick="showMail(event)">Email</a></li>
       </p>
     </footer>
   </main>
@@ -160,7 +160,7 @@
         <ul>
           <li>Links lead to external services (e.g., Spotify, TikTok). Their privacy policies apply there.</li>
           <li>Server log files (IP/browser/date) may be generated briefly for technical reasons.</li>
-          <li>Contact: <a data-key="email" id="privacy-email">church</a></li>
+          <li>Contact: <a data-key="email" id="privacy-email">churchdilemma@gmail.com</a></li>
         </ul>
         <p>When you click a link, the target page opens in a new tab.</p>
 
@@ -202,10 +202,25 @@
     
     document.querySelectorAll('iconify-icon').forEach(i => i.setAttribute('inline','false'));
     
-    const pe = document.getElementById('privacy-email');
-    if (pe && map && map.email) {
-      pe.textContent = map.email.replace(/^mailto:/i,'');
-    }
+    <script>
+function showMail(e) {
+  e.preventDefault();
+
+  fetch('links.txt', { cache: 'no-store' })
+    .then(r => r.text())
+    .then(t => {
+      const lines = t.split(/\r?\n/);
+      const emailLine = lines.find(l => l.trim().startsWith('email='));
+      if (!emailLine) return;
+
+      const email = emailLine.split('=')[1].trim().replace(/^mailto:/i, '');
+      // nur den sichtbaren Text ändern
+      e.target.textContent = email;
+    })
+    .catch(err => console.warn('Fehler beim Laden der E-Mail:', err));
+}
+</script>
+
 
   </script>
   
