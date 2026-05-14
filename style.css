@@ -220,7 +220,7 @@ iconify-icon {
   border:0;transform: scale(1.75);
   background: transparent;
 }
-.svc.youtube:hover{box-shadow:none}
+.svc.youtube:hover{box-shadow:none, translateY(-2px)}
 
 /* Streaming-Icons: hell im Artwork-Panel, weiß im Vent-Panel */
 .svc svg,
