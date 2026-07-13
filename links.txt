@@ -10,10 +10,10 @@ artwork_youtubemusic=https://music.youtube.com/channel/UC_wF-vuRBNh4XAxeoNa0oBw
 artwork_applemusic=https://music.apple.com/at/artist/church-dilemma-artwork/1848947110
 artwork_amazonmusic=https://music.amazon.de/artists/B0FXYG8VVD/church-dilemma-artwork
 artwork_deezer=https://www.deezer.com/de/artist/353061822
-artwork_soundcloud=https://soundcloud.com/church-dilemma-artwork
-artwork_youtube=https://www.youtube.com/@churchdilemma.artwork
+artwork_soundcloud=https://soundcloud.com/church-dilemma
+artwork_youtube=https://www.youtube.com/@churchdilemma
 # ARTWORK — Community
-artwork_tiktok=https://www.tiktok.com/@churchdilemma.artwork
+artwork_tiktok=https://www.tiktok.com/@churchdilemma
 
 # VENT — Streaming
 vent_spotify=https://open.spotify.com/artist/2dWpepqv5D8PBkDjydZOB0
