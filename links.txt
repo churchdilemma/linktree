@@ -5,11 +5,11 @@ twitter=https://x.com/churchdilemma
 email=mailto:churchdilemma@gmail.com
 
 # ARTWORK — Streaming
-artwork_spotify=https://open.spotify.com/artist/5EexlTyklNojYqKe6Avizs
-artwork_youtubemusic=https://music.youtube.com/channel/UC_wF-vuRBNh4XAxeoNa0oBw
+artwork_spotify=https://open.spotify.com/intl-de/artist/6poqaThTO5N0LHoXhOpBg7
+artwork_youtubemusic=https://music.youtube.com/channel/UC6P8sQZEnraO5BHFTuWE-MA
 artwork_applemusic=https://music.apple.com/at/artist/church-dilemma-artwork/1848947110
-artwork_amazonmusic=https://music.amazon.de/artists/B0FXYG8VVD/church-dilemma-artwork
-artwork_deezer=https://www.deezer.com/de/artist/353061822
+artwork_amazonmusic=https://music.amazon.de/artists/B0GZVVQL1L/church-dilemma
+artwork_deezer=https://www.deezer.com/de/artist/389628691
 artwork_soundcloud=https://soundcloud.com/church-dilemma
 artwork_youtube=https://www.youtube.com/@churchdilemma
 # ARTWORK — Community
